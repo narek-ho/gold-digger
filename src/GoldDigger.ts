@@ -9,7 +9,7 @@ export const GoldDigger: Game<GameState> = {
   setup: () => ({ cells: initCells(GAME_CONFIG.CELLS_COUNT, GAME_CONFIG.MINES_COUNT), winsCount: 0 }),
 
   moves: {
-    clickCell: ({ G }, id) => {
+    clickCell: ({ G, events }, id) => {
       if (G.cells[id].isRevealed === true) {
         return INVALID_MOVE;
       }
@@ -20,9 +20,9 @@ export const GoldDigger: Game<GameState> = {
         G.winsCount++;
       }
 
-      // if (G.cells[id].type === 'MINE') {
-      //   events.endGame();
-      // }
+      if (G.cells[id].value === 'MINE') {
+        events.endGame();
+      }
     }
   },
 
