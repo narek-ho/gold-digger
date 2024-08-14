@@ -1,7 +1,6 @@
 import { MouseEventHandler } from 'react';
 
-import { CellValue } from './types.ts';
-
+import { CellValue } from '@/types';
 
 export interface GameState {
   cells: CellProps[];
@@ -9,8 +8,8 @@ export interface GameState {
 }
 
 export interface GameConfig {
-  CELLS_COUNT: number,
-  MINES_COUNT: number
+  CELLS_COUNT: number;
+  MINES_COUNT: number;
 }
 
 export interface CellProps {

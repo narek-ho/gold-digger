@@ -1,9 +1,9 @@
 import { Game } from 'boardgame.io';
 import { INVALID_MOVE } from 'boardgame.io/core';
 
-import { GAME_CONFIG } from './constants.ts';
-import { GameState } from './interfaces.ts';
-import { initCells } from './utils.ts';
+import { GAME_CONFIG } from '@/constants';
+import { GameState } from '@/interfaces';
+import { initCells } from '@/utils';
 
 export const GoldDigger: Game<GameState> = {
   setup: () => ({ cells: initCells(GAME_CONFIG.CELLS_COUNT, GAME_CONFIG.MINES_COUNT), winsCount: 0 }),
