@@ -1,17 +1,13 @@
-import { twMerge } from 'tailwind-merge';
-
 import { CellProps } from '@/interfaces';
+import { MINE_IMAGE_SRC, TREASURE_IMAGE_SRC } from '@/constants.ts';
 
 export default function Cell({ value, isRevealed, onClick }: CellProps) {
   return (
-    <div
-      className={twMerge(
-        'bg-theme-indigo-200 shadow-theme-dark-100 flex aspect-[4/5] items-center justify-center rounded shadow-md',
-        isRevealed && value === 'MINE' && 'bg-red-700',
-        isRevealed && value === 'TREASURE' && 'bg-theme-teal-100'
+    <div className="bg-theme-indigo-200 shadow-theme-dark-100 aspect-[4/5] rounded shadow-md" onClick={onClick}>
+      {isRevealed && value === 'TREASURE' && (
+        <img className="h-full w-full object-cover" src={TREASURE_IMAGE_SRC} alt="treasure" />
       )}
-      onClick={onClick}>
-      {value}
+      {isRevealed && value === 'MINE' && <img className="h-full w-full object-cover" src={MINE_IMAGE_SRC} alt="mine" />}
     </div>
   );
 }
