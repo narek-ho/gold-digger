@@ -6,9 +6,9 @@ export default function Cell({ value, isRevealed, onClick }: CellProps) {
   return (
     <div
       className={twMerge(
-        'flex aspect-[4/5] items-center justify-center rounded bg-theme-indigo-2 shadow-md shadow-theme-dark-1',
+        'bg-theme-indigo-200 shadow-theme-dark-100 flex aspect-[4/5] items-center justify-center rounded shadow-md',
         isRevealed && value === 'MINE' && 'bg-red-700',
-        isRevealed && value === 'TREASURE' && 'bg-theme-teal-1'
+        isRevealed && value === 'TREASURE' && 'bg-theme-teal-100'
       )}
       onClick={onClick}>
       {value}

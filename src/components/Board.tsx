@@ -17,11 +17,11 @@ export default function Board({ G, moves }: BoardProps<GameState>) {
         <Settings />
       </div>
       <div className="relative flex flex-[4] flex-col items-center bg-gray-800 p-8">
-        <time className="absolute left-2 top-2 text-theme-light-1">{time}</time>
-        <h1 className="flex justify-center text-8xl font-bold uppercase -tracking-widest text-theme-light-1">
+        <time className="text-theme-light-100 absolute left-2 top-2">{time}</time>
+        <h1 className="text-theme-light-100 flex justify-center text-8xl font-bold uppercase -tracking-widest">
           {MINES}
         </h1>
-        <ul className="mt-8 grid w-4/5 grid-cols-5 gap-2">
+        <ul className="grid w-4/5 grid-cols-5 gap-2 p-8">
           {G.cells.map((cell: CellProps, id: number) => (
             <Cell {...cell} key={`cell-${id}`} onClick={() => handleClick(id)} />
           ))}
