@@ -12,11 +12,11 @@ export default function Board({ G, moves }: BoardProps<GameState>) {
   const time = useTime();
 
   return (
-    <div className="flex">
-      <div className="flex-[1]">
+    <div className="bg-theme-dark-100 flex min-h-screen gap-2">
+      <div className="bg-theme-light-100 flex-[1]">
         <Settings />
       </div>
-      <div className="relative flex flex-[4] flex-col items-center bg-gray-800 p-8">
+      <div className="bg-theme-indigo-100 relative flex flex-[4] flex-col items-center p-4">
         <time className="text-theme-light-100 absolute left-2 top-2">{time}</time>
         <h1 className="text-theme-light-100 flex justify-center text-8xl font-bold uppercase -tracking-widest">
           {MINES}

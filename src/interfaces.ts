@@ -16,5 +16,5 @@ export interface CellProps {
   value: CellValue;
   isRevealed: boolean;
 
-  onClick?: MouseEventHandler<HTMLDivElement>;
+  onClick?: MouseEventHandler<HTMLElement>;
 }
