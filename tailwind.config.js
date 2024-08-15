@@ -45,8 +45,8 @@ export default {
         'theme-teal-100': '#19ca9c',
         'theme-teal-200': '#24887c',
         'theme-teal-300': '#255863',
-        'theme-gray-100': '#2a2a2a',
-        'theme-dark-100': '#0f0f0f'
+        'theme-dark-100': '#2a2a2a',
+        'theme-dark-200': '#0f0f0f'
       }
     }
   },

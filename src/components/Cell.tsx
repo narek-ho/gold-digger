@@ -7,7 +7,7 @@ export default function Cell({ value, isRevealed, onClick = () => {} }: CellProp
 
   return (
     <div
-      className={`${isRevealed && 'revealed'} flip-card shadow-theme-dark-100 relative aspect-[4/5] rounded-l shadow-md`}
+      className={`${isRevealed && 'revealed'} flip-card shadow-theme-dark-200 relative aspect-square overflow-hidden rounded shadow-md`}
       onClick={onClick}>
       <div className="flip-card__inner">
         <div className="flip-card__side bg-theme-indigo-200"></div>

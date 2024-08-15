@@ -30,5 +30,9 @@ export const GoldDigger: Game<GameState> = {
 
   endIf: ({ G }) => {
     G.cells.some(c => c.isRevealed && c.value === MINE);
+  },
+  
+  onEnd: ({ events }) => {
+    events.endGame();
   }
 };
