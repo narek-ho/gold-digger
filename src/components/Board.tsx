@@ -6,7 +6,7 @@ import Cell from '@/components/Cell';
 import Settings from '@/components/Settings';
 import useTime from '@/hooks/useTime';
 
-export default function Board({ G, ctx, moves }: BoardProps<GameState>) {
+export default function Board({ G, moves }: BoardProps<GameState>) {
   // const [time, setTime] = useState<string>();
   const handleClick = (id: number) => moves.clickCell(id);
   const time = useTime();

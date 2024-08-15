@@ -1,17 +1,17 @@
 import { MINE_OPTIONS, CUSTOM, NUMBER_OF_MINES, RESET } from '@/constants.ts';
-import { useState } from 'react';
+// import { useState } from 'react';
 
-interface MinesConfig {
-  id: number;
-  count: number;
-}
+// interface MinesConfig {
+//   id: number;
+//   count: number;
+// }
 
 export default function Settings({ handleReset = () => {} }) {
-  const [minesConfig, setMinesConfig] = useState<MinesConfig>({ id: 1, count: 3 });
-
-  const handleMinesConfigButtonClick = ({ id, count }: MinesConfig) => {
-    setMinesConfig({ id: id, count: count });
-  };
+  // const [minesConfig, setMinesConfig] = useState<MinesConfig>({ id: 1, count: 3 });
+  //
+  // const handleMinesConfigButtonClick = ({ id, count }: MinesConfig) => {
+  //   setMinesConfig({ id: id, count: count });
+  // };
 
   return (
     <div className="bg-theme-dark-200 text-theme-light-100 flex h-full min-h-screen flex-col gap-2 p-1 pr-2">
