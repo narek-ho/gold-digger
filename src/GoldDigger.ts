@@ -1,7 +1,7 @@
 import { Game } from 'boardgame.io';
 import { INVALID_MOVE } from 'boardgame.io/core';
 
-import { GAME_CONFIG } from '@/constants';
+import { GAME_CONFIG, MINE, TREASURE } from '@/constants';
 import { GameState } from '@/interfaces';
 import { initCells } from '@/utils';
 
@@ -16,11 +16,11 @@ export const GoldDigger: Game<GameState> = {
 
       G.cells[id].isRevealed = true;
 
-      if (G.cells[id].value === 'TREASURE') {
+      if (G.cells[id].value === TREASURE) {
         G.winsCount++;
       }
 
-      if (G.cells[id].value === 'MINE') {
+      if (G.cells[id].value === MINE) {
         events.endGame();
       }
     }
@@ -29,6 +29,6 @@ export const GoldDigger: Game<GameState> = {
   turn: { minMoves: 1, maxMoves: 1 },
 
   endIf: ({ G }) => {
-    G.cells.some(c => c.isRevealed && c.value === 'MINE');
+    G.cells.some(c => c.isRevealed && c.value === MINE);
   }
 };
