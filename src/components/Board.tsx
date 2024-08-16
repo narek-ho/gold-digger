@@ -7,7 +7,6 @@ import Settings from '@/components/Settings';
 import useTime from '@/hooks/useTime';
 
 export default function Board({ G, moves }: BoardProps<GameState>) {
-  // const [time, setTime] = useState<string>();
   const handleClick = (id: number) => moves.clickCell(id);
   const time = useTime();
 
@@ -16,13 +15,13 @@ export default function Board({ G, moves }: BoardProps<GameState>) {
   };
 
   return (
-    <div className="bg-theme-dark-200 flex min-h-screen">
-      <div className="bg-theme-light-100 flex-[1]">
+    <div className="flex min-h-screen bg-theme-dark-200">
+      <div className="flex-[1] bg-theme-light-100">
         <Settings handleReset={handleReset} />
       </div>
-      <div className="bg-theme-indigo-100 relative flex flex-[4] flex-col items-center p-4">
-        <time className="text-theme-light-100 absolute left-2 top-2">{time}</time>
-        <h1 className="text-theme-light-100 flex justify-center text-8xl font-bold uppercase -tracking-widest">
+      <div className="relative flex flex-[4] flex-col items-center bg-theme-indigo-100 p-4">
+        <time className="absolute left-2 top-2 text-theme-light-100">{time}</time>
+        <h1 className="flex justify-center text-8xl font-bold uppercase -tracking-widest text-theme-light-100">
           {MINES}
         </h1>
         <ul className="grid w-1/2 grid-cols-5 gap-2 p-8">

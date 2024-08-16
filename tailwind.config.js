@@ -39,7 +39,7 @@ export default {
       colors: {
         'theme-light-100': '#eae6ff',
         'theme-gold-100': '#c29d45',
-        'theme-indigo-100': '#272749',
+        'theme-indigo-100': '#39396a',
         'theme-indigo-200': '#2a2e53',
         'theme-indigo-300': '#363a58',
         'theme-teal-100': '#19ca9c',
