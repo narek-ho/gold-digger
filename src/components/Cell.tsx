@@ -7,14 +7,14 @@ export default function Cell({ value, isRevealed, onClick = () => {} }: CellProp
 
   return (
     <div
-      className={`${isRevealed && 'revealed'} relative aspect-square cursor-pointer overflow-hidden rounded shadow-md shadow-theme-dark-200 flip-card`}
+      className={`${isRevealed && 'revealed'} relative aspect-square h-36 w-36 cursor-pointer rounded flip-card`}
       onClick={onClick}>
-      <div className="flip-card__inner">
+      <div className="rounded shadow-md shadow-theme-dark-200 flip-card__inner">
         <div className="bg-theme-indigo-200 flip-card__side"></div>
-        <div className="flip-card__side flip-card__back">
+        <div className="overflow-hidden rounded flip-card__side flip-card__back">
           <img className="h-full w-full object-cover" src={imageSrc} alt={imageAlt} />
         </div>
-        <div className="absolute inset-0 bg-black/10 hover:bg-black/5"></div>
+        <div className="absolute inset-0 rounded bg-black/10 hover:bg-black/5"></div>
       </div>
     </div>
   );

@@ -24,7 +24,7 @@ export default function Board({ G, moves }: BoardProps<GameState>) {
         <h1 className="flex justify-center text-8xl font-bold uppercase -tracking-widest text-theme-light-100">
           {MINES}
         </h1>
-        <ul className="grid w-1/2 grid-cols-5 gap-2 p-8">
+        <ul className="grid grid-cols-5 gap-2 p-8">
           {G.cells.map((cell: CellProps, id: number) => (
             <Cell {...cell} key={`cell-${id}`} onClick={() => handleClick(id)} />
           ))}

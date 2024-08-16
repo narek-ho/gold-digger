@@ -14,12 +14,12 @@ export default function Settings({ handleReset = () => {} }) {
   // };
 
   return (
-    <div className="bg-theme-dark-200 text-theme-light-100 flex h-full min-h-screen flex-col gap-2 p-1 pr-2">
-      <div className="bg-theme-dark-100 flex flex-1 flex-col rounded p-2">
+    <div className="flex h-full min-h-screen flex-col gap-2 bg-theme-dark-200 p-1 pr-2 text-theme-light-100">
+      <div className="flex flex-1 flex-col rounded bg-theme-dark-100 p-2">
         <h1 className="text">{NUMBER_OF_MINES}</h1>
         <div className="flex gap-[1px] overflow-hidden rounded text-xs font-bold">
           {MINE_OPTIONS.map(m => (
-            <button className="bg-theme-teal-100 px-4 py-2 text-black" key={`mine-option-${m}`}>
+            <button className="bg-theme-indigo-100 px-4 py-2 text-white" key={`mine-option-${m}`}>
               {m}
             </button>
           ))}
@@ -27,13 +27,13 @@ export default function Settings({ handleReset = () => {} }) {
         </div>
         Under development
         <div
-          className="bg-theme-teal-100 flex cursor-pointer items-center justify-center rounded-3xl py-2 font-bold text-black"
+          className="flex cursor-pointer items-center justify-center rounded-3xl bg-theme-indigo-100 py-2 font-bold text-white"
           onClick={handleReset}>
           {RESET}
         </div>
       </div>
-      <div className="bg-theme-dark-100 flex items-center justify-around rounded p-2">demo balance</div>
-      <div className="bg-theme-dark-100 flex items-center justify-around rounded p-2">
+      <div className="flex items-center justify-around rounded bg-theme-dark-100 p-2">demo balance</div>
+      <div className="flex items-center justify-around rounded bg-theme-dark-100 p-2">
         <div className="p-1">sound</div>
         <div className="p-1">music</div>
         <div className="p-1">info</div>
